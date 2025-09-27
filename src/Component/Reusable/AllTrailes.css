@@ -1,0 +1,75 @@
+.trailers-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4757; /* لون مميز */
+  margin-bottom: 30px;
+}
+
+.trailer-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.trailer-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Images Of this  Movie */
+.poster-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto; /* سكرول أفقي */
+  padding: 10px;
+  scrollbar-width: thin; /* للفايرفوكس */
+}
+
+.poster-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.poster-scroll::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.poster-scroll::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.poster-card {
+  flex: 0 0 calc(25% - 15px); /* 4 صور في الصف */
+  min-width: 250px; /* عشان يفضل شكلهم مظبوط */
+}
+
+.poster-card img {
+  width: 100%;
+  height: 300px;
+  transition: transform 0.5s ease;
+}
+
+.poster-card img:hover {
+  transform: scale(1.01);
+}
+
+/* ------------------------- Video ----------------------- */
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.play-icon {
+  font-size: 3rem;
+  opacity: 0.9;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.trailer-card:hover .play-icon {
+  color: gold;
+}

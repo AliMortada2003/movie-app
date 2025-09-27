@@ -1,0 +1,72 @@
+/* الصورة */
+img.rounded-3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img.rounded-3:hover {
+  transform: scale(1.09);
+  box-shadow: 0px 8px 25px rgba(255, 193, 7, 0.3);
+}
+
+/* العنوان */
+h2.text-warning {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* البادجز */
+.badge.bg-secondary {
+  background: linear-gradient(135deg, #495057, #0a1928);
+  font-size: 0.9rem;
+  padding: 0.5em 0.8em;
+  border-radius: 12px;
+}
+
+/* الأيقونات */
+.icon-btn {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* ليست الشركات */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+ul li img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* الروابط */
+a.text-info {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a.text-info:hover {
+  color: #0dcaf0;
+  text-decoration: underline;
+}
+
+/* الكارد */
+.movie-details-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}

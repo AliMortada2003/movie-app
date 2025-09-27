@@ -1,0 +1,66 @@
+{selectedMovie && (
+<Modal show={show} onHide={handleClose} size="lg" centered>
+<Modal.Header closeButton className="bg-dark text-light">
+<Modal.Title>{selectedMovie.title}</Modal.Title>
+</Modal.Header>
+<Modal.Body className="bg-dark text-light">
+<Row>
+<Col md={7}>
+<img
+src={imageBaseUrl + selectedMovie.poster_path}
+alt={selectedMovie.title}
+className="img-fluid rounded-3 shadow"
+/>
+</Col>
+<Col md={5}>
+<h5 className="text-warning mb-3">Overview</h5>
+<p>{selectedMovie.overview}</p>
+<p>
+<strong>Release Date:</strong> {selectedMovie.release_date}
+</p>
+<p>
+<strong>Rating:</strong> ⭐ {selectedMovie.vote_average.toFixed(1)} / 10
+</p>
+<p>
+<strong>Total Votes:</strong> {selectedMovie.vote_count}
+</p>
+<div className="d-flex gap-4">
+<Button variant="outline-light">
+<OverlayTrigger placement="top" overlay={<Tooltip>Add to Favorite</Tooltip>}>
+<span className="icon-btn text-danger">
+<FaHeart size={24} />
+</span>
+</OverlayTrigger>
+</Button>
+<Button variant="outline-light">
+<OverlayTrigger placement="top" overlay={<Tooltip>Add to List</Tooltip>}>
+<span className="icon-btn text-info">
+<FaListUl size={24} />
+</span>
+</OverlayTrigger>
+</Button>
+<Button variant="outline-light">
+<OverlayTrigger placement="top" overlay={<Tooltip>Add to Watchlist</Tooltip>}>
+<span className="icon-btn text-warning">
+<FaBookmark size={24} />
+</span>
+</OverlayTrigger>
+</Button>
+<Button variant="outline-light">
+<OverlayTrigger placement="top" overlay={<Tooltip>Play Trailer</Tooltip>}>
+<span className="icon-btn text-success">
+<FaPlay size={24} />
+</span>
+</OverlayTrigger>
+</Button>
+</div>
+</Col>
+</Row>
+</Modal.Body>
+<Modal.Footer className="bg-dark">
+<Button variant="secondary" className="w-25" onClick={handleClose}>
+Close
+</Button>
+</Modal.Footer>
+</Modal>
+)}
